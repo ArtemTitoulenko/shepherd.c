@@ -10,6 +10,8 @@
 		AC9DC7E917968CBB0017E7D7 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = AC9DC7E817968CBB0017E7D7 /* main.c */; };
 		AC9DC7EB17968CBB0017E7D7 /* Shepherd.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC9DC7EA17968CBB0017E7D7 /* Shepherd.1 */; };
 		AC9DC7F7179692180017E7D7 /* hash.c in Sources */ = {isa = PBXBuildFile; fileRef = AC9DC7F4179692180017E7D7 /* hash.c */; };
+		ACA0BE6517973F6A000839A7 /* node.c in Sources */ = {isa = PBXBuildFile; fileRef = ACA0BE6417973F6A000839A7 /* node.c */; };
+		ACA0BE6817974126000839A7 /* graph.c in Sources */ = {isa = PBXBuildFile; fileRef = ACA0BE6717974126000839A7 /* graph.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +35,10 @@
 		AC9DC7F4179692180017E7D7 /* hash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hash.c; sourceTree = "<group>"; };
 		AC9DC7F5179692180017E7D7 /* hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
 		AC9DC7F6179692180017E7D7 /* khash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = khash.h; sourceTree = "<group>"; };
+		ACA0BE6317973F40000839A7 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		ACA0BE6417973F6A000839A7 /* node.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = node.c; sourceTree = "<group>"; };
+		ACA0BE6617973F8F000839A7 /* node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
+		ACA0BE6717974126000839A7 /* graph.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = graph.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +82,11 @@
 		AC9DC7F117968D160017E7D7 /* graph */ = {
 			isa = PBXGroup;
 			children = (
+				ACA0BE6717974126000839A7 /* graph.c */,
 				AC9DC7F217968D870017E7D7 /* graph.h */,
+				ACA0BE6317973F40000839A7 /* common.h */,
+				ACA0BE6417973F6A000839A7 /* node.c */,
+				ACA0BE6617973F8F000839A7 /* node.h */,
 			);
 			name = graph;
 			sourceTree = "<group>";
@@ -144,6 +154,8 @@
 			files = (
 				AC9DC7E917968CBB0017E7D7 /* main.c in Sources */,
 				AC9DC7F7179692180017E7D7 /* hash.c in Sources */,
+				ACA0BE6517973F6A000839A7 /* node.c in Sources */,
+				ACA0BE6817974126000839A7 /* graph.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +254,7 @@
 				AC9DC7F017968CBB0017E7D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,32 +12,29 @@
 
 #include "graph.h"
 
+int important_value = 1;
+void * pre_req(void * data) {
+  return &important_value; // or something
+}
+
+void * do_work(void * data) {
+  if (*(int *)data == 1) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
 int main(int argc, const char ** argv) {
   graph_t * graph = malloc(sizeof(graph_t));
   
-  /* ideal API
+   graph_add_node(graph, "bar", pre_req);
    
-   void * pre_req(void * data) {
-   return &1; // or something
-   }
+   graph_add_node(graph, "foo", do_work);
+   graph_node_builds(graph, "foo", "bar");
+  
+   printf("graph_eval(graph, 'foo'): %i\n", *(int *)graph_eval(graph, "foo")); // #=> 1
    
-   void * do_work(void * data) {
-     if ((int *)data == 1) {
-       return true;
-     } else {
-       return false
-     }
-   }
-   
-   graph->add_node("bar", pre_req);
-   
-   graph->add_node("foo", do_work)
-     ->using("bar");
-   
-   printf("graph->eval('foo'): %i\n", graph->eval('foo')); // #=> 1
-   
-   */
-
   free(graph);
   return 0;
 }
