@@ -14,6 +14,29 @@
 
 int main(int argc, const char ** argv) {
   graph_t * graph = malloc(sizeof(graph_t));
+  
+  /* ideal API
+   
+   void * pre_req(void * data) {
+   return &1; // or something
+   }
+   
+   void * do_work(void * data) {
+     if ((int *)data == 1) {
+       return true;
+     } else {
+       return false
+     }
+   }
+   
+   graph->add_node("bar", pre_req);
+   
+   graph->add_node("foo", do_work)
+     ->using("bar");
+   
+   printf("graph->eval('foo'): %i\n", graph->eval('foo')); // #=> 1
+   
+   */
 
   free(graph);
   return 0;
