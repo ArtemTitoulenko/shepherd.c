@@ -7,12 +7,15 @@
 //
 
 #include <stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-int main(int argc, const char * argv[])
-{
+#include "graph.h"
 
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
+int main(int argc, const char ** argv) {
+  graph_t * graph = malloc(sizeof(graph_t));
+
+  free(graph);
+  return 0;
 }
 

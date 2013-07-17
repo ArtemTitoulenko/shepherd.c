@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC9DC7E917968CBB0017E7D7 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = AC9DC7E817968CBB0017E7D7 /* main.c */; };
 		AC9DC7EB17968CBB0017E7D7 /* Shepherd.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC9DC7EA17968CBB0017E7D7 /* Shepherd.1 */; };
+		AC9DC7F7179692180017E7D7 /* hash.c in Sources */ = {isa = PBXBuildFile; fileRef = AC9DC7F4179692180017E7D7 /* hash.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,10 @@
 		AC9DC7E517968CBB0017E7D7 /* Shepherd */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Shepherd; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9DC7E817968CBB0017E7D7 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		AC9DC7EA17968CBB0017E7D7 /* Shepherd.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Shepherd.1; sourceTree = "<group>"; };
+		AC9DC7F217968D870017E7D7 /* graph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = graph.h; sourceTree = "<group>"; };
+		AC9DC7F4179692180017E7D7 /* hash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hash.c; sourceTree = "<group>"; };
+		AC9DC7F5179692180017E7D7 /* hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
+		AC9DC7F6179692180017E7D7 /* khash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = khash.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +65,30 @@
 		AC9DC7E717968CBB0017E7D7 /* Shepherd */ = {
 			isa = PBXGroup;
 			children = (
+				AC9DC7F3179692180017E7D7 /* deps */,
+				AC9DC7F117968D160017E7D7 /* graph */,
 				AC9DC7E817968CBB0017E7D7 /* main.c */,
 				AC9DC7EA17968CBB0017E7D7 /* Shepherd.1 */,
 			);
 			path = Shepherd;
+			sourceTree = "<group>";
+		};
+		AC9DC7F117968D160017E7D7 /* graph */ = {
+			isa = PBXGroup;
+			children = (
+				AC9DC7F217968D870017E7D7 /* graph.h */,
+			);
+			name = graph;
+			sourceTree = "<group>";
+		};
+		AC9DC7F3179692180017E7D7 /* deps */ = {
+			isa = PBXGroup;
+			children = (
+				AC9DC7F4179692180017E7D7 /* hash.c */,
+				AC9DC7F5179692180017E7D7 /* hash.h */,
+				AC9DC7F6179692180017E7D7 /* khash.h */,
+			);
+			path = deps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC9DC7E917968CBB0017E7D7 /* main.c in Sources */,
+				AC9DC7F7179692180017E7D7 /* hash.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
